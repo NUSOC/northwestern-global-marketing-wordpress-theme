@@ -1,0 +1,53 @@
+// COLORS
+
+// Basic Colors
+$white: #fff;
+$black: #000;
+$medium-grey: #ccc;
+$light-grey: #f0f0f0;
+$red: #b2292e;
+
+// Northwestern Purples
+$nu-purple: #4e2a84; 			// Official NU Purple
+$nu-purple-120: #401f68; 	// NU Purple 120
+$nu-purple-60: #836eaa; 	// NU Purple 60
+$nu-purple-30: #b6acd1; 	// NU Purple 30
+$nu-purple-10: #e4e0ee; 	// NU Purple 10
+
+// Rich Blacks
+$rich-black-80: #342f2e; 	// Rich Black 80 (default body text)
+$rich-black-50: #716c6b; 	// Rich Black 50
+$rich-black-20: #bbb8b8; 	// Rich Black 20
+$rich-black-10: #d8d6d6; 	// Rich Black 10
+
+// Default Colors
+$purple: $nu-purple;
+$purple_dark: $nu-purple-120;
+$gray_dark: $rich-black-80;
+$text: $rich-black-50;
+
+// FONTS
+$path-fonts: "../fonts";
+
+$AkkuratLight: "Akkurat Pro Light", Arial, sans-serif;
+$AkkuratLightItalic: "Akkurat Pro Light Italic", Arial, sans-serif;
+$AkkuratProRegular: "Akkurat Pro Regular", Arial, sans-serif;
+$AkkuratProItalic: "Akkurat Pro Italic", Arial, sans-serif;
+$AkkuratProBold: "Akkurat Pro Bold", "Arial Black", sans-serif;
+$AkkuratProBoldItalic: "Akkurat Pro Bold Italic", "Arial Black", sans-serif;
+
+$CamptonLight: "Campton Light", Tahoma, sans-serif;
+$CamptonLightItalic: "Campton Light Italic", Tahoma, sans-serif;
+$CamptonMedium: "Campton Medium", Tahoma, sans-serif;
+$CamptonMediumItalic: "Campton Medium Italic", Tahoma, sans-serif;
+$CamptonBold: "Campton Bold", Impact, sans-serif;
+$CamptonBoldItalic: "Campton Bold Italic", Impact, sans-serif;
+$CamptonExtraBold: "Campton Extra Bold", Impact, sans-serif; //Unused
+$CamptonExtraLight: "Campton Extra Light", "Courier New", sans-serif; //Unused
+
+$PeriodicoThin: "Periodico Display Thin", Georgia, serif;
+$PeriodicoThinItalic: "Periodico Display Thin Italic", Georgia, serif;
+$Periodico: "Periodico Display", Georgia, serif;
+$PeriodicoItalic: "Periodico Display Italic", Georgia, serif;
+$PeriodicoBold: "Periodico Display Bold", Georgia, serif;
+$PeriodicoBoldItalic: "Periodico Display Bold Italic", Georgia, serif;

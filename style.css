@@ -1,0 +1,32 @@
+/******************************************************************
+Theme Name: Northwestern (Global)
+Theme URI: http://www.northwestern.edu/brand
+Author: Northwestern IT S&S Media and Design
+Author URI: https://mediadesign.it.northwestern.edu/
+Description: The Northwestern University Global Marketing WordPress theme.
+Version: 1.3.06
+License: MIT License
+License URI: https://opensource.org/licenses/MIT
+Tags: accessibility-ready, microformats, one-column, two-columns, left-sidebar, custom-menu, post-formats, featured-image-header, featured-images, custom-logo, editor-style, full-width-template, threaded-comments, theme-options, education
+Text Domain: nu_gm
+
+******************************************************************/
+
+/*
+WordPress Probz
+So Theme Check (http://wordpress.org/plugins/theme-check/)
+is constantly telling me that it needs these classes in the CSS even
+though they are in the REAL stylesheet in library/css/style.css.
+So we're gonna drop these here to keep it happy.
+Great work, Theme Check (eye roll)
+*/
+
+/* DO NOT EDIT THIS */
+/* THESE ARE USELESS */
+/* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+.wp-caption-text {}
+.wp-caption {}
+.screen-reader-text{}

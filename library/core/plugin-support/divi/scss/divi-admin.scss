@@ -1,0 +1,18 @@
+#et_pb_layout {
+  .et_pb_section {
+    a.et-pb-settings-section {
+      display: none;
+    }
+  }
+  .et-pb-controls {
+    .et-pb-settings-section,
+    .et-pb-clone-section,
+    .et-pb-remove-section {
+      display: none;
+    }
+  }
+  a.et-pb-section-add,
+  a.et-pb-app-settings-button {
+    display: none;
+  }
+}

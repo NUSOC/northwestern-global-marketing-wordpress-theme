@@ -1,0 +1,104 @@
+<?php
+/*
+ * CUSTOM POST TYPE ARCHIVE TEMPLATE
+ *
+ * This is the custom post type archive template. If you edit the custom post type name,
+ * you've got to change the name of this template to reflect that name change.
+ *
+ * For Example, if your custom post type is called "register_post_type( 'bookmarks')",
+ * then your template name should be archive-bookmarks.php
+ *
+ * For more info: http://codex.wordpress.org/Post_Type_Templates
+*/
+?>
+
+<?php get_header(); ?>
+
+				<main id="main-content" tabindex="-1" class="content<?php if(!get_theme_mod('archive_display_sidebar_setting', true)): ?>-full<?php endif; ?> m-all t-2of3 d-5of7 cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+					<?php nu_gm_breadcrumbs(); ?>
+
+					<?php
+					the_archive_title( '<h2 class="page-title">', '</h2>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					?>
+
+					<?php echo nu_gm_post_format_wrapper('start'); ?>
+					
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+						<?php if(get_theme_mod('post_list_format_setting', 'standard') == 'standard'): ?>
+
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?>>
+
+								<div class="entry-header article-header">
+
+									<h4 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+									<p class="byline entry-meta vcard">
+										<?php printf( __( 'Posted', 'nu_gm' ).' %1$s %2$s',
+		              							     /* the time the post was published */
+		              							     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+		                   								/* the author of the post */
+		                   								'<span class="by">'.__('by', 'nu_gm').'</span> <span class="entry-author author">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+		                							); ?>
+
+										<span itemprop="author" itemscope itemtype="http://schema.org/Person" hidden style="display:none;">
+				              <meta itemprop="url mainEntityOfPage" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" hidden />
+				              <?php if($display_name = get_the_author()): ?><meta itemprop="name" content="<?php echo $display_name; ?>" hidden /><?php endif; ?>
+				              <?php if($first_name == get_the_author_meta( 'first_name' )): ?><meta itemprop="givenName" content="<?php echo $first_name; ?>" hidden /><?php endif; ?>
+				              <?php if($last_name == get_the_author_meta( 'last_name' )): ?><meta itemprop="familyName" content="<?php echo $last_name; ?>" hidden /><?php endif; ?>
+				            </span>
+  									<meta itemprop="dateModified" content="<?php echo the_modified_time('Y-m-d'); ?>" hidden />
+
+									</p>
+
+								</div>
+
+								<div class="entry-content cf">
+
+									<?php the_post_thumbnail( 'nu-gm-thumb-300' ); ?>
+
+									<?php the_excerpt(); ?>
+
+								</div>
+
+								<div class="article-footer">
+
+								</div>
+
+							</article>
+
+						<?php else: ?>
+
+							<?php get_template_part( 'nu-gm-formats/format', get_theme_mod('post_list_format_setting') ); ?>
+							
+						<?php endif; ?>
+
+					<?php endwhile; ?>
+
+					<?php echo nu_gm_post_format_wrapper('end'); ?>
+
+							<?php nu_gm_page_navi(); ?>
+
+					<?php else : ?>
+
+							<article id="post-not-found" class="hentry cf">
+								<div class="article-header">
+									<h2><?php _e( 'Oops, Post Not Found!', 'nu_gm' ); ?></h2>
+								</div>
+								<div class="entry-content">
+									<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'nu_gm' ); ?></p>
+								</div>
+								<div class="article-footer">
+										<p><?php _e( 'This is the error message in the archive.php template.', 'nu_gm' ); ?></p>
+								</div>
+							</article>
+
+					<?php endif; ?>
+
+				</main>
+
+			<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>
+

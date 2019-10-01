@@ -1,0 +1,27 @@
+diff --git a/library/js/gm-scripts.js b/library/js/gm-scripts.js
+index ec6e5dc..07f2cf5 100755
+--- a/library/js/gm-scripts.js
++++ b/library/js/gm-scripts.js
+@@ -16,8 +16,9 @@
+       $("table tr:odd").addClass("stripe");
+       
+       function switchTab(target) {
+-          $('#tab-content>div').hide();
+-          $('#tabs a').removeClass('active').attr('aria-selected', 'false');
++          $parent = target.parents('#tabs-container');
++          $parent.find('#tab-content>div').hide();
++          $parent.find('#tabs a').removeClass('active').attr('aria-selected', 'false');
+           $(target.attr('href')).show();
+           target.addClass('active').attr('aria-selected', 'true');
+       }
+@@ -30,7 +31,9 @@
+       
+       // select first tab when page loads
+       if ($('#tabs a[aria-controls]').length) {
+-      	switchTab($('#tab1'));
++      	$('#tabs').each(function(index, el) {
++          switchTab($(this).find('[aria-controls]').first());
++        });
+       }
+ 
+       // flip image on hover

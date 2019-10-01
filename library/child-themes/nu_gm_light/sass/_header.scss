@@ -1,0 +1,28 @@
+@import "init/_init";
+
+#top-bar {
+  #left {
+    #top-bar-northwestern-logo.northwestern-n {
+      width: auto;
+      height: 21.547px;
+    }
+  }
+}
+
+#top-nav {
+  &.narrow-dropdown {
+    ul.top-nav {
+      &> li.menu-item-has-children {
+        &:hover {
+          &:last-child {
+            &> ul.dropdown {
+              left: inherit;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

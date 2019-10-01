@@ -1,0 +1,1 @@
+To use any of the custome templates in this directory, simply copy and paste the appropriate template file into the theme directory, remove the .txt extension, and update the filename to match the appropriate naming convention for the custom data model.
