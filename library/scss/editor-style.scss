@@ -17,22 +17,22 @@ here http://codex.wordpress.org/Function_Reference/add_editor_style */
 body#tinymce.wp-editor {
 
 	// normalize: http://necolas.github.io/normalize.css/
-	@import "partials/normalize";
+	@use "partials/normalize";
 
 	// Sass variables
-	@import "partials/variables";
+	@use "partials/variables";
 
 	// typography
-	@import "partials/typography";
+	@use "partials/typography";
 
 	// Sass functions
-	@import "partials/functions";
+	@use "partials/functions";
 
 	// import mixins
-	@import "partials/mixins";
+	@use "partials/mixins";
 
 	width: 731px;
-	font-family: $lato;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;

@@ -4,10 +4,32 @@
 @font-face{font-family:"Akkurat Pro Italic";src:url("https://common.northwestern.edu/v8/css/fonts/AkkuratProItalic.woff") format("woff");font-weight:normal;font-style:normal}
 @font-face{font-family:"Akkurat Pro Bold";src:url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBold.woff") format("woff");font-weight:normal;font-style:normal}
 @font-face{font-family:"Akkurat Pro Bold Italic";src:url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBoldItalic.woff") format("woff");font-weight:normal;font-style:normal}
-@font-face{font-family:"Campton Book";src:url("https://common.northwestern.edu/v8/css/fonts/CamptonBook.woff") format("woff");font-weight:normal;font-style:normal}
-@font-face{font-family:"Campton Bold";src:url("https://common.northwestern.edu/v8/css/fonts/CamptonBold.woff") format("woff");font-weight:normal;font-style:normal}
-@font-face{font-family:"Campton Extra Bold";src:url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraBold.woff") format("woff");font-weight:normal;font-style:normal}
-@font-face{font-family:"Campton Extra Light";src:url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraLight.woff") format("woff");font-weight:normal;font-style:normal}
+<!-- @font-face{font-family:"Campton Book";src:url("https://common.northwestern.edu/v8/css/fonts/CamptonBook.woff") format("woff");font-weight:normal;font-style:normal} -->
+<!-- @font-face{font-family:"Campton Bold";src:url("https://common.northwestern.edu/v8/css/fonts/CamptonBold.woff") format("woff");font-weight:normal;font-style:normal} -->
+<!-- @font-face{font-family:"Campton Extra Bold";src:url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraBold.woff") format("woff");font-weight:normal;font-style:normal} -->
+<!-- @font-face{font-family:"Campton Extra Light";src:url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraLight.woff") format("woff");font-weight:normal;font-style:normal} -->
+
+@font-face { font-family: “Poppins Black”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Black.woff2”) format(“woff2”); font-weight: normal; font-style: normal; }
+@font-face { font-family: “Poppins Black Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-BlackItalic.woff2”) format(“woff2”); font-weight: normal; font-style: italic; }
+@font-face { font-family: “Poppins Bold”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Bold.woff2”) format(“woff2”); font-weight: bold; font-style: normal; }
+@font-face { font-family: “Poppins Bold Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-BoldItalic.woff2”) format(“woff2”); font-weight: bold; font-style: italic; }
+@font-face { font-family: “Poppins ExtraBold”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraBold.woff2”) format(“woff2”); font-weight: 800; font-style: normal; }
+@font-face { font-family: “Poppins ExtraBold Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraBoldItalic.woff2”) format(“woff2”); font-weight: 800; font-style: italic; }
+@font-face { font-family: “Poppins ExtraLight”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraLight.woff2”) format(“woff2”); font-weight: 200; font-style: normal; }
+@font-face { font-family: “Poppins ExtraLight Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ExtraLightItalic.woff2”) format(“woff2”); font-weight: 200; font-style: italic; }
+@font-face { font-family: “Poppins Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Italic.woff2”) format(“woff2”); font-weight: normal; font-style: italic; }
+@font-face { font-family: “Poppins Light”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Light.woff2”) format(“woff2”); font-weight: 300; font-style: normal; }
+@font-face { font-family: “Poppins Light Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-LightItalic.woff2”) format(“woff2”); font-weight: 300; font-style: italic; }
+@font-face { font-family: “Poppins Medium”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Medium.woff2”) format(“woff2”); font-weight: 500; font-style: normal; }
+@font-face { font-family: “Poppins Medium Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-MediumItalic.woff2”) format(“woff2”); font-weight: 500; font-style: italic; }
+@font-face { font-family: “Poppins Regular”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Regular.woff2”) format(“woff2”); font-weight: normal; font-style: normal; }
+@font-face { font-family: “Poppins SemiBold”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-SemiBold.woff2”) format(“woff2”); font-weight: 600; font-style: normal; }
+@font-face { font-family: “Poppins SemiBold Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-SemiBoldItalic.woff2”) format(“woff2”); font-weight: 600; font-style: italic; }
+@font-face { font-family: “Poppins Thin”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-Thin.woff2”) format(“woff2”); font-weight: 100; font-style: normal; }
+@font-face { font-family: “Poppins Thin Italic”; src: url(“https://media.soc.northwestern.edu/common/fonts/Poppins/Poppins-ThinItalic.woff2”) format(“woff2”); font-weight: 100; font-style: italic; }
+ 
+
+
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, center, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, #top-nav ul, #top-nav li, #global-links ul, #global-links li, #mobile-nav ul, #mobile-nav li, #left-nav ul, #left-nav li, ul#breadcrumbs, ul#breadcrumbs li, footer ul, footer li {
   margin: 0;
@@ -33,12 +55,12 @@ body {
   overflow-x: hidden;
 }
 h2 {
-  font: 46px/1.2em "Campton Book",Tahoma,sans-serif;
+  font: 46px/1.2em "Poppins Regular",Tahoma,sans-serif;
   color: #4e2a84;
   margin-bottom: 1rem;
 }
 h3 {
-  font: 34px "Campton Bold",Impact,sans-serif;
+  font: 34px "Poppins Bold",Impact,sans-serif;
   color: #4e2a84;
   margin-bottom: .5rem;
 }
@@ -66,7 +88,7 @@ h5 {
   margin-bottom: 1rem;
 }
 h6 {
-  font: 18px "Campton Bold",Impact,sans-serif;
+  font: 18px "Poppins Bold",Impact,sans-serif;
   color: #716c6b;
   margin-bottom: 1rem;
 }
@@ -274,7 +296,7 @@ body {
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
 }
 .hero h2 {
-  font: 24px "Campton Extra Bold",Impact,sans-serif;
+  font: 24px "Poppins Extra Bold",Impact,sans-serif;
   color: #fff;
   text-shadow: 2px 2px 0px #000;
   margin-bottom: 1.5em;
@@ -291,7 +313,7 @@ body {
   content: " ";
 }
 .hero p {
-  font: 60px/1.2em "Campton Bold",Impact,sans-serif;
+  font: 60px/1.2em "Poppins Bold",Impact,sans-serif;
   color: #fff;
   text-shadow: 2px 2px 0px #000;
   margin: 0 0 1rem 0;

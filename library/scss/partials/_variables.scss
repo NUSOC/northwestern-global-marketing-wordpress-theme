@@ -17,6 +17,8 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
+@use "sass:color";
+
 $alert-yellow:      #ebe16f;
 $alert-red:         #fbe3e4;
 $alert-green:       #e6efc2;
@@ -34,11 +36,11 @@ $tan:               #eceee5;
 
 $green:             #7dd667;
 
-$pink:        #f01d4f;
+$pink:              #f01d4f;
 $blue:              #2980b9;
 
 $link-color:        $pink;
-$link-hover:        darken($link-color, 9%);
+$link-hover:        color.adjust($link-color, $lightness: 9%);
 
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;

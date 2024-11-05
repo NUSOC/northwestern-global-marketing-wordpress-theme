@@ -941,7 +941,7 @@ a.fancybox:hover {
   clear: left;
 }
 .people-card .people-content h4 a{
-  font: 24px/1.2em "Campton Bold",Impact,sans-serif;
+  font: 24px/1.2em "Poppins Bold",Impact,sans-serif;
 }
 @media screen and (max-width: 900px) {
   .type-nu_gm_project .people-small-project-contributor,
@@ -953,7 +953,7 @@ a.fancybox:hover {
 
 /* Author Archives */
 body.author.archive h4.author-title {
-  font: 24px/1.2em "Campton Bold",Impact,sans-serif;
+  font: 24px/1.2em "Poppins Bold",Impact,sans-serif;
   color: #716c6b;
 }
 
