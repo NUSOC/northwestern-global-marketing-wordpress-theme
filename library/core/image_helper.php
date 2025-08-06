@@ -70,7 +70,7 @@ function nu_gm_custom_image_sizes( $sizes ) {
 /************* IMAGE SWIPERJS GALLERY SUPPORT *************/
 
 // Rewrite WP Gallery output as swiperJS slider
-function nugm_gallery_style($output = '', $atts, $instance){
+function nugm_gallery_style($atts, $instance, $output = ''){
   $return = $output; // fallback
 
   $image_size = (empty($atts['size']) ? 'hero-landing' : $atts['size']);
