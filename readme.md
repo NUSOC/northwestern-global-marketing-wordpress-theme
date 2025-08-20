@@ -1,5 +1,5 @@
 # Northwestern Global Marketing WordPress Theme
-
+ 
 **Built & Managed by [Northwestern IT Academic & Research Technologies](http://www.it.northwestern.edu/about/departments/at/)**
 
 A comprehensive WordPress theme built for Northwestern University's Global Marketing branding guidelines, featuring extensive customization options, custom post types, and specialized widgets.
