@@ -348,6 +348,24 @@ function nu_gm_theme_customizer ($wp_customize) {
     'priority' => 30,
   ));
 
+  // Hide RSS Feed
+  $wp_customize->add_setting( 'nu_hide_rss' , array(
+    'default' => false,
+    'sanitize_callback' => 'nu_gm_sanitize_checkbox',
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'nu_hide_rss',
+      array(
+        'label' => 'Hide RSS Feed',
+        'section' => 'footer_social_media_links',
+        'type' => 'checkbox',
+        'settings' => 'nu_hide_rss',
+      )
+    )
+  );
+
   // Footer Social Media Links
   $social_media_options = get_supported_social_media();
   foreach ($social_media_options as $social_media_option) {
