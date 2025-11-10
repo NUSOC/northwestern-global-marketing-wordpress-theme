@@ -3,58 +3,69 @@
 // LOAD NU_GM CORE (if you remove this, the theme will break)
 require_once( dirname( __FILE__ ) . '/library/nu_gm.php' );
 
-/*********************
-LAUNCH NU_GM
-Let's get everything up and running.
-*********************/
 
-function nu_gm_setup() {
+/**
+ * Check if the nu_gm_setup function is already defined.
+ *
+ * This prevents a fatal error caused by redeclaring the function when both
+ * the parent and child themes define nu_gm_setup(). WordPress loads both
+ * functions.php files, so this check ensures compatibility and avoids conflicts.
+ */
+if ( ! function_exists( 'nu_gm_setup' ) ) {
 
-  // Add editor style.
-  add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
 
-  // launching operation cleanup
-  add_action( 'init', 'nu_gm_cleanup' );
-
-  // A better title
-  add_filter( 'wp_title', 'rw_title', 10, 3 );
-
-  // remove WP version from RSS
-  add_filter( 'the_generator', 'nu_gm_rss_version' );
-
-  // remove pesky injected css for recent comments widget
-  add_filter( 'wp_head', 'nu_gm_remove_wp_widget_recent_comments_style', 1 );
-
-  // clean up comment styles in the head
-  add_action( 'wp_head', 'nu_gm_remove_recent_comments_style', 1 );
-
-  // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'nu_gm_scripts_and_styles', 999 );
-
-  // enqueue admin scripts and styles
-  add_action( 'admin_enqueue_scripts', 'nu_gm_admin_scripts_and_styles', 999 );
-
-  // launching this stuff after theme setup
-  nu_gm_theme_support();
-
-  // adding sidebars to Wordpress (these are created in functions.php)
-  add_action( 'widgets_init', 'nu_gm_register_sidebars' );
-
-  // clean up gallery output in wp
-  add_filter( 'gallery_style', 'nu_gm_gallery_style' );
-
-  // cleaning up random code around images
-  add_filter( 'the_content', 'nu_gm_filter_ptags_on_images' );
-
-  // cleaning up excerpt
-  add_filter( 'excerpt_more', 'nu_gm_excerpt_more' );
-
-  // update display of category links to include rich data
-  add_filter('the_category', 'nu_gm_category_microdata', 10, 3);
-
-  // update display of tag links to include rich data
-  add_filter('the_tags', 'nu_gm_tag_microdata', 10, 5);
-
+  /* ********************
+  LAUNCH NU_GM
+  Let's get everything up and running.
+  ******************** */
+  function nu_gm_setup() {
+  
+    // Add editor style.
+    add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
+  
+    // launching operation cleanup
+    add_action( 'init', 'nu_gm_cleanup' );
+  
+    // A better title
+    add_filter( 'wp_title', 'rw_title', 10, 3 );
+  
+    // remove WP version from RSS
+    add_filter( 'the_generator', 'nu_gm_rss_version' );
+  
+    // remove pesky injected css for recent comments widget
+    add_filter( 'wp_head', 'nu_gm_remove_wp_widget_recent_comments_style', 1 );
+  
+    // clean up comment styles in the head
+    add_action( 'wp_head', 'nu_gm_remove_recent_comments_style', 1 );
+  
+    // enqueue base scripts and styles
+    add_action( 'wp_enqueue_scripts', 'nu_gm_scripts_and_styles', 999 );
+  
+    // enqueue admin scripts and styles
+    add_action( 'admin_enqueue_scripts', 'nu_gm_admin_scripts_and_styles', 999 );
+  
+    // launching this stuff after theme setup
+    nu_gm_theme_support();
+  
+    // adding sidebars to Wordpress (these are created in functions.php)
+    add_action( 'widgets_init', 'nu_gm_register_sidebars' );
+  
+    // clean up gallery output in wp
+    add_filter( 'gallery_style', 'nu_gm_gallery_style' );
+  
+    // cleaning up random code around images
+    add_filter( 'the_content', 'nu_gm_filter_ptags_on_images' );
+  
+    // cleaning up excerpt
+    add_filter( 'excerpt_more', 'nu_gm_excerpt_more' );
+  
+    // update display of category links to include rich data
+    add_filter('the_category', 'nu_gm_category_microdata', 10, 3);
+  
+    // update display of tag links to include rich data
+    add_filter('the_tags', 'nu_gm_tag_microdata', 10, 5);
+  
+  }
 }
 
 // let's get this party started
