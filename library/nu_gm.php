@@ -720,11 +720,26 @@ function nu_gm_header_bar_color_style() {
   }
 }
 
-// Function to return classes that should be applied to the top nav
+/* Function to return classes that should be applied to the top nav
 function nu_gm_top_nav_classes() {
   $classes     = apply_filters( 'nu_gm_top_nav_classes', array() );
   $classes_str = implode( ' ', $classes );
   return $classes_str;
+} */
+
+// Function to return classes that should be applied to the top nav
+function nu_gm_top_nav_classes() {
+  $classes = apply_filters( 'nu_gm_top_nav_classes', array() );
+
+  if ( is_array( $classes ) ) {
+    return implode( ' ', $classes );
+  }
+
+  if ( is_string( $classes ) ) {
+    return $classes;
+  }
+
+  return '';
 }
 
 // Function to return image that should be used to represent Northwestern in the footer
