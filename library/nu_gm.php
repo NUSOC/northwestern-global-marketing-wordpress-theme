@@ -185,7 +185,9 @@ add_filter('walker_nav_menu_start_el', 'nu_gm_add_menu_dropdown_arrows', 10, 4);
 class NU_GM_Sublevel_Walker extends Walker_Nav_Menu
 {
   function __construct() {
-    $this->use_fullwidth_dropdown = !in_array( 'narrow-dropdown', apply_filters( 'nu_gm_top_nav_classes', array() ) );
+    $classes = apply_filters( 'nu_gm_top_nav_classes', array() );
+    $classes = is_array( $classes ) ? $classes : array();
+    $this->use_fullwidth_dropdown = !in_array( 'narrow-dropdown', $classes );
   }
   public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     parent::start_el( $output, $item, $depth, $args, $id );
@@ -731,11 +733,11 @@ function nu_gm_top_nav_classes() {
 function nu_gm_top_nav_classes() {
   $classes = apply_filters( 'nu_gm_top_nav_classes', array() );
 
-  if ( is_array( $classes ) ) {
+  if ( is_array( $classes ) && !empty( $classes ) ) {
     return implode( ' ', $classes );
   }
 
-  if ( is_string( $classes ) ) {
+  if ( is_string( $classes ) && !empty( $classes ) ) {
     return $classes;
   }
 
